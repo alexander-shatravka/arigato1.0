@@ -10,6 +10,9 @@ var currentItemHTML =
                 '<span><b class="heading">Выход</b></span><span class="details weight">'+ window.catalog[id].weight +' гр</span>\n'+
             '</div>\n'+
             '<div class="row">\n'+
+                '<p class="ingridients">'+ window.catalog[id].ingridients +'</p>\n'+
+            '</div>\n'+
+            '<div class="row">\n'+
                 '<span><b class="heading">Количество</b></span>\n'+
                 '<div class="counter"><span class="minus disabled">-</span><span class="quantity">1</span><span class="plus">+</span></div>\n'+
             '</div>\n'+
@@ -39,6 +42,11 @@ var counter = 0;
 for (var key in itemInfo) {
      infoHTML += '<li class="col">'+ itemInfo[key] +'<span>'+ key +'</span></li>\n'
      counter++;
+}
+
+for (var key in itemInfo) {
+    infoHTML += '<li class="col">'+ itemInfo[key] +'<span>'+ key +'</span></li>\n'
+    counter++;
 }
 
 $('.item-section').html(currentItemHTML);

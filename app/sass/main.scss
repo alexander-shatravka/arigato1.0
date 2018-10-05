@@ -152,6 +152,7 @@ section {
 }
 
 .counter {
+	user-select: none;
 	float: right;
 	span{
 		height: 18px;
@@ -458,6 +459,7 @@ section {
 				}
 
 				.counter {
+					user-select: none;
 					span{
 						height: 14px;
 						width: 14px;
@@ -672,6 +674,7 @@ section {
 			font-weight: 700;
 			text-align: right;
 			max-width: 190px;
+			width: 210px;
 			font-family: 'PT Sans-Narrow', sans-serif!important;
 
 			&#name{
@@ -1640,6 +1643,11 @@ header {
 				transform: translateY(-50%);
 				height: 40px;
 				background: $red-arigato;
+
+				@include media ('<tablet') {
+					height: 30px;
+					transform: translateY(-60%);
+				}
 			}
 
 			&:nth-child(2){
@@ -2401,10 +2409,42 @@ header {
 
 	.container {
 		height: 500px;
+		position: relative;
+
+		@include media ('<tablet') {
+			height: 100%;
+		}
 
 		iframe {
-			max-width: 1024px;
+			max-width: 70%;
 			width: 100%;
+			float: left;
+
+			@include media ('<tablet') {
+				max-width: 100%;
+				float: none;
+			}
+
+		}
+
+		.descr {
+			position: absolute;
+			width: 30%;
+			padding: 30px;
+			box-sizing: border-box;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: left;
+
+			@include media ('<tablet') {
+				
+			}
+
+			p {
+				margin-bottom: 10px;
+				font-size: 20px;
+			}
 		}
 	}
 	
@@ -3101,6 +3141,7 @@ footer {
 			}
 	
 			.counter {
+				user-select: none;
 				float: right;
 				span{
 					height: 18px;

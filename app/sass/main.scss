@@ -2351,6 +2351,11 @@ header {
 
 	.container {
 		height: 500px;
+
+		iframe {
+			max-width: 1024px;
+			width: 100%;
+		}
 	}
 	
 	.svg-content {

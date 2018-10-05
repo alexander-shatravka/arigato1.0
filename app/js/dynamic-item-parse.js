@@ -11,7 +11,7 @@ var currentItemHTML =
             '</div>\n'+
             '<div class="row">\n'+
                 '<span><b class="heading">Количество</b></span>\n'+
-                '<div class="counter"><span class="plus">+</span><span class="quantity">1</span><span class="minus disabled">-</span></div>\n'+
+                '<div class="counter"><span class="minus disabled">-</span><span class="quantity">1</span><span class="plus">+</span></div>\n'+
             '</div>\n'+
             '<div class="row">\n'+
                 '<span><b class="heading">К оплате</b></span>\n'+

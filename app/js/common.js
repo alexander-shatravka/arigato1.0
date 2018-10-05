@@ -120,7 +120,7 @@ function initSlickAutoplay(){
 
 function initSlick(){
 	$('.slick-slider').slick({
-        autoplay: true,
+        autoplay: false,
         vertical: false,
 		autoplaySpeed: 6000,
 		speed	: 1000,
@@ -128,7 +128,8 @@ function initSlick(){
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
-		arrows: true,
+        arrows: true,
+        draggable: true,
 		pauseOnFocus: false,
 		pauseOnHover: false,
         pauseOnClick: false,

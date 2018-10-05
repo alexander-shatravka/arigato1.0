@@ -2395,78 +2395,53 @@ header {
 }
 
 .delivery-section {
-	position: relative;
-	height: 580px;
 	padding: 0;
+	height: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	@include media ('<tablet') {
+		display: block;
+	}
 
 	.anchor {
 		position: absolute;
 		top: -100px;
 	}
 
-	.heading {
-		margin-bottom: 45px;
+	iframe {
+		margin-top: 80px;
+		width: 70%;
+		height: 450px;
+
+		@include media ('<tablet') {
+			margin-top: 90px;
+			width: 100%;
+		}
+
 	}
 
 	.container {
-		height: 500px;
-		position: relative;
+		width: 30%;
+		margin-top: 100px;
+		padding: 0 30px;
 
 		@include media ('<tablet') {
-			height: 100%;
-		}
-
-		iframe {
-			max-width: 70%;
 			width: 100%;
-			float: left;
-
-			@include media ('<tablet') {
-				max-width: 100%;
-				float: none;
-			}
-
+			margin-top: 0;
 		}
 
 		.descr {
-			position: absolute;
-			width: 30%;
-			padding: 30px;
-			box-sizing: border-box;
-			right: 0;
-			top: 50%;
-			transform: translateY(-50%);
 			text-align: left;
-
-			@include media ('<tablet') {
-				
-			}
+			margin: auto;
+			padding: 30px 0;
 
 			p {
 				margin-bottom: 10px;
 				font-size: 20px;
 			}
 		}
-	}
-	
-	.svg-content {
-		width: 50%;
-		height: 100%;
-		float: left;
-
-		img {
-			width: 90%;
-			height: auto;
-		}
-	}
-
-	.text-content {
-		margin-top: 80px;
-		display: inline-block;
-		width: 49%;
-		text-align: left;
-		height: 100%;
-		float: right;
 	}
 }
 

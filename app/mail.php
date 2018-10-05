@@ -12,6 +12,8 @@
                     <p>Адресс доставки: '.$_POST['address'].'</p> 
                     <p>Самовывоз из:'.$_POST['pickup-destination'].'</p>  
                     <p>Количество приборов:'.$_POST['tools-quantity'].'</p> 
+                    <p>Количество единиц соевого соуса:'.$_POST['sause-quantity'].'</p> 
+                    <p>Количество единиц васаби:'.$_POST['vasabi-quantity'].'</p> 
                     <p>Заказ:<br>'.$_POST['cart-content'].'</p>                         
                 </body>
             </html>'; //Текст нащего сообщения можно использовать HTML теги

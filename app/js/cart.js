@@ -117,12 +117,16 @@ function initRemovingItems() {
 
 function initTotalPrice(){
     var allPricesCollection = Array.from(document.querySelectorAll('.current-price-cart b'));
+    var sauseQuantity = Number($('.sause-quantity .quantity').text());
+    var vasabiQuantity = Number($('.vasabi-quantity .quantity').text());
+    var additionalPrice = (sauseQuantity + vasabiQuantity) * 5;
+    //alert(additionalPrice);
     var allPrices = allPricesCollection.map(function(item){return Number(item.innerHTML)});
-    var totalPrice = (allPrices.reduce(function(sum, current) {
+    var totalPrice = (additionalPrice + allPrices.reduce(function(sum, current) {
         return sum + current;
-      }, 0)).toFixed(2);
+      }, 0)).toFixed(0);
 
-    $('.total-price b').html(totalPrice);
+    $('.total-price b').html(Number(totalPrice));
 }
 
 function initSameItemCounter(){

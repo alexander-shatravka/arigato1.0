@@ -266,14 +266,16 @@ function initItemCounter(){
             quantityValue ++;
             initUpdateItemMenu($(this));
             setInputToolsQuantity();
+            initTotalPrice();
         }
         if($(this).hasClass('minus') && ($(this).hasClass('disabled')) === false){
             quantity.text(quantityValue - 1);
             quantityValue --;
             initUpdateItemMenu($(this));
             setInputToolsQuantity();
+            initTotalPrice();
         }
-        if(quantityValue === 1){
+        if(quantityValue === 0){
             $(this).parents('.counter').find('.minus').addClass('disabled');
         }
         else{
@@ -289,6 +291,10 @@ function initItemCounter(){
         function setInputToolsQuantity() {
             var toolsQuantity = $('.tools-quantity .quantity').text();
             $('#tools-quantity').val(toolsQuantity); 
+            var sauseQuantity = $('.sause-quantity .quantity').text();
+            $('#sause-quantity').val(sauseQuantity); 
+            var vasabiQuantity = $('.vasabi-quantity .quantity').text();
+            $('#vasabi-quantity').val(vasabiQuantity); 
         }
     })
 }

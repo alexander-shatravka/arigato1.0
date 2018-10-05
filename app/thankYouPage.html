@@ -99,14 +99,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 		<div class="form-block">
 			<a class="close-form"><i class="form-closer fas fa-arrow-left"></i>Оформление заказа</a>
-			<form action="">
+			<form id="order">
 				<div class="row">
 					<label for="name">Имя</label>
-					<input type="text" name="name" id="name">
+					<input type="text" name="name" id="name" required>
 				</div>
 				<div class="row">
 					<label for="phone">Телефон</label>
-					<input type="tel" name="phone" id="phone" placeholder="+38 (0--) --- -- --">
+					<input type="tel" name="phone" id="phone" placeholder="+38 (0--) --- -- --" required>
+				</div>
+				<div class="row">
+					<label for="email">Эл. почта</label>
+					<input type="text" name="email" id="email" placeholder="Введите свой e-mail" required>
 				</div>
 				<div class="button-row" id="delivery-way">
 					<a class="button btn-white active" id="delivery">Доставка</a>
@@ -118,21 +122,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="row single-input dynamic" id="pickup-address">
 					<input type="text" name="pickup-destination" id="pickup-destination" placeholder="Пункт самовывоза">
 				</div>
-				<div class="button-row">
+				<!-- <div class="button-row">
 					<a class="button btn-white active" id="delivery-now">На сейчас</a>
 					<a class="button btn-white" id="pick-date">На время</a>
-				</div>
+				</div> -->
 				<div class="row-cols dynamic" id="datepicker">
 					<input type="text" name="date" id="date" placeholder="Дата"> 
 					<input type="text" name="time" id="time" placeholder="Время">
 				</div>
 				<div class="row">
 					<label for="tools-quantity">Количество приборов</label>
-					<div class="counter">
-						<span class="plus">+</span>
-						<span class="quantity">1</span>
+					<div class="counter tools-quantity">
 						<span class="minus disabled">-</span>
+						<span class="quantity">1</span>
+						<span class="plus">+</span>
 					</div>
+				</div>
+				<div class="row">
+					<label for="sause-quantity">Соевый соус <b class="additional">+5 грн</b></label>
+					<div class="counter sause-quantity">
+						<span class="minus disabled">-</span>
+						<span class="quantity">0</span>
+						<span class="plus">+</span>
+					</div>
+				</div>
+				<div class="row">
+					<label for="vasabi-quantity">Васаби <b class="additional">+5 грн</b></label>
+					<div class="counter vasabi-quantity">
+						<span class="minus disabled">-</span>
+						<span class="quantity">0</span>
+						<span class="plus">+</span>
+					</div>
+				</div>
+				<div class="row-hidden">
+					<input type="text" name="tools-quantity" id="tools-quantity">
+					<input type="text" name="sause-quantity" id="sause-quantity">
+					<input type="text" name="vasabi-quantity" id="vasabi-quantity">
+					<input type="text" name="cart-content" id="cart-content">
 				</div>
 			</form>
 			<div class="destination-picker picker">

@@ -259,6 +259,13 @@ section {
 	box-shadow: -5px 0px 10px 0px rgba(0,0,0,0.1);
 	transition: 0.5s right;
 
+	@include media ('<tablet') {
+		min-height: 100%;
+		height: 100%;
+		right: -100%;
+		width: 100%;
+	}
+
 	&.open {
 		right: 0;
 		transition: 0.5s right;
@@ -1330,7 +1337,7 @@ header {
 #nav {
 	display: block;
 	position: fixed;
-	left: -320px;
+	left: -100%;
 	top: 0;
 	height: 100vh;
 	width: 320px;
@@ -1343,6 +1350,13 @@ header {
 	align-items: center;
 	justify-content: center;
 	box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+	@include media ('<tablet') {
+		min-height: 100%;
+		height: 100%;
+		right: -100%;
+		width: 100%;
+	}
 
 	&.open {
 		left: 0;

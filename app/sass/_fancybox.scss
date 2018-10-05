@@ -1,0 +1,30 @@
+.fancybox-content {
+  padding: 0 0 0 0!important;
+  overflow: hidden;
+  text-align: center;
+  display: inline-block;
+  margin: 0 0 0 0!important;
+  max-width: 30%;
+  overflow: hidden!important;
+  position: relative;
+  text-align: left;
+  vertical-align: none!important;
+  
+}
+
+.fancybox-active {
+    overflow: hidden;
+    .fancybox-content {
+      z-index: 9999999;
+      background: #fff;
+      display: inline-block;
+      max-width: 100%;
+      width: 102%;
+      height: 102%;
+      overflow: auto;
+      padding: 24px;
+      position: relative;
+      text-align: left;
+      vertical-align: middle;
+  }
+}

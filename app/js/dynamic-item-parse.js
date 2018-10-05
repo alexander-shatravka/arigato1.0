@@ -10,14 +10,14 @@ var currentItemHTML =
                 '<span><b class="heading">Выход</b></span><span class="details weight">'+ window.catalog[id].weight +' гр</span>\n'+
             '</div>\n'+
             '<div class="row">\n'+
-                '<p class="ingridients">'+ window.catalog[id].ingridients +'</p>\n'+
+                '<p class="ingridients">'+ window.catalog[id].ingredients +'</p>\n'+
             '</div>\n'+
             '<div class="row">\n'+
                 '<span><b class="heading">Количество</b></span>\n'+
                 '<div class="counter"><span class="minus disabled">-</span><span class="quantity">1</span><span class="plus">+</span></div>\n'+
             '</div>\n'+
             '<div class="row">\n'+
-                '<span><b class="heading">К оплате</b></span>\n'+
+                '<span><b class="heading">Цена</b></span>\n'+
                 '<span class="price"><span class="current-price"><b>'+ window.catalog[id].discountedPrice +'</b> грн</span></span>\n'+
             '</div>\n'+
             '<div class="row">	\n'+

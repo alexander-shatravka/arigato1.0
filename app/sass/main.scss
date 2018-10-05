@@ -1101,6 +1101,7 @@ header {
 		z-index: 99999;
 
 		@include media('<tablet') {
+			width: 60px;
 			height: 60px;
 		}
 
@@ -1240,7 +1241,7 @@ header {
 			.info-list {
 				margin: 0;
 				padding: 0 20px;
-				justify-content: space-between;
+				justify-content: space-around;
 				height: 30px;
 
 				li {
@@ -2847,7 +2848,7 @@ footer {
 	}
 
 	@include media ('<554px') {
-		height: 530px;
+		height: 570px;
 	}
 
 	.social {
@@ -2914,10 +2915,19 @@ footer {
 		&.col-l {
 			width: 293px;
 
-				@include media ('<tablet') {
-					text-align: center;
-					width: 260px;
-				}
+			@include media ('<tablet') {
+				text-align: center;
+				width: 260px;
+			}
+		}
+
+		@include media ('<tablet') {
+			margin-bottom: 10px;
+			margin-top: 10px;
+
+			&:last-child {
+				height: auto;
+			}
 		}
 	}
 

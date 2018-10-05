@@ -1,14 +1,11 @@
 function initPreloader() {
-	$(window).load(function() {
-		setTimeout(function() {
-			$('#preloader').fadeOut('slow', function() {});
-		}, 0);
-	});
+    setTimeout(function() {
+        $('#preloader').fadeOut('slow', function() {});
+    }, 3000);
 } 
 
-initPreloader();
-
 $(document).ready(function(){
+    initPreloader();
     initSlick();
     initBurgerMenu();
     //initSlickAutoplay();

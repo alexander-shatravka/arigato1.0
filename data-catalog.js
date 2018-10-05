@@ -10,7 +10,7 @@ window.catalog = [{
     hasNew: true,
     category: ['суши', 'presentation'],
     weight: 285,
-    info: {'грамм':'215','калорий':'400','гривен':'145'},
+    info: {'калорий':'400','рыбы':'320 гр','риса':'120 гр', 'процент':'10 %', 'Креветка тигровая': '9 шт'},
     ingredients: 'Рис, Нори, Авокадо, Огурец, Тобико, Лосось',
     size: 8,
     thumbnail: 'img/dishes/Alaska-600.jpg', // replace with path to image extracted from catalog layout
@@ -22,12 +22,12 @@ window.catalog = [{
     description: 'The best food for you and your friends.Филадельфия',
     placeholder: null,
     discountedPrice: 370, 
-    price: 370,
+    price: 370
     popularity: 1,
     hasNew: true,
     category: ['суши', 'presentation'],
     weight: 268,
-    info: {'грамм':'243','калорий':'550','гривен':'370'},
+    info: {'калорий':'550','рыбы':'320 гр','риса':'320 гр', 'процент':'30 %', 'майонеза': '15 гр'},
     ingredients: 'Рис, Нори, Сыр сливочный, Авокадо, Угорь унаги, Кунжут, Соус унаги, Тобико, Креветка тигровая',
     size: 8,
     thumbnail: 'img/dishes/Dragon-600.jpg', // replace with path to image extracted from catalog layout
@@ -45,7 +45,7 @@ window.catalog = [{
     category: ['суши', 'presentation'],
     info: {},
     weight: 300,
-    info: {'грамм':'300','калорий':'450','гривен':'220'},
+    info: {'калорий':'450','рыбы':'410 гр','риса':'720 гр', 'процент':'20 %', 'майонеза': '30 гр'},
     ingredients: 'Рис, Нори, Сыр сливочный, Огурец, Лосось',
     size: 8,
     thumbnail: 'img/dishes/Fila-salmon-600.jpg', // replace with image extracted from item layout

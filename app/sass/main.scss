@@ -45,6 +45,7 @@ a {
 
 #wrapper {
 	overflow-x: hidden!important;
+	min-height: 100vh;	
 }
 
 #preloader {
@@ -59,8 +60,13 @@ a {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		height: 60px;
-		width: 200px;
+		height: 200px;
+		width: 220px;
+
+		img{
+			height: 100%;
+			width: 100%;
+		}
 	}
 }
 
@@ -705,6 +711,10 @@ section {
 			border-bottom: 1px solid #e9e9e9; 
 			box-sizing: border-box;
 
+			@include media ('<tablet') {
+				height: 40px;
+			}
+
 			&.single-input {
 				input[type='text'] {
 					width: 100%!important;
@@ -724,6 +734,10 @@ section {
 				height: 50px;
 				transition: 0.3s height;
 				border-bottom: 1px solid #e9e9e9;
+
+				@include media ('<tablet') {
+					height: 40px;
+				}
 			}
 		}
 
@@ -847,6 +861,7 @@ section {
 	}
 
 	.destination-picker {
+		padding-top: 80px;
 
 		ul {
 			//margin-top: 70px;
@@ -1049,15 +1064,23 @@ header {
 		position: absolute;
 		left: 80px;
 		top: 25px;
-		height: 30px;
+		transform: translateY(-28%);
+		height: 60px;
 		width: 160px;
 		display: inline-block;
 		z-index: 99999999;
 
 		@include media('<tablet') {
+			height: 40px;
+			width: 100px;
 			top: 10px;
 			left: 50%;
 			transform: translateX(-50%);
+		}
+
+		img {
+			height: 100%;
+			width: auto;
 		}
 	}
 
@@ -1337,7 +1360,7 @@ header {
 #nav {
 	display: block;
 	position: fixed;
-	left: -100%;
+	left: -320px;
 	top: 0;
 	height: 100vh;
 	width: 320px;
@@ -1354,13 +1377,13 @@ header {
 	@include media ('<tablet') {
 		min-height: 100%;
 		height: 100%;
-		right: -100%;
+		left: -100%;
 		width: 100%;
 	}
 
 	&.open {
 		left: 0;
-		transition: left 0.5s;
+		transition: left 0.5s ease-in-out;
 	}
 
 	.main-nav {
@@ -1563,7 +1586,7 @@ header {
 			@include media ('<tablet') {
 				font-size: 12px;
 				height: 100%;
-				padding: 5px 0 0 5px;
+				padding: 5px 0 0 10px;
 			}
 
 			b {
@@ -1571,6 +1594,7 @@ header {
 				font-weight: 700;
 				display: inline-block;
 				margin-right: 5px;
+				letter-spacing:0px;
 
 				@include media ('<tablet') {
 					font-size: 14px;
@@ -1614,6 +1638,12 @@ header {
 				background: $red-arigato;
 			}
 
+			&:nth-child(2){
+				&::before {
+					display: none;
+				}
+			}
+
 			span {
 				text-align: left;
 				font-size: 18px;
@@ -1625,6 +1655,7 @@ header {
 				@include media ('<tablet') {
 					font-size: 12px;
 					margin: 0;
+					letter-spacing: 1px;
 				}
 			}
 		}
@@ -1827,8 +1858,10 @@ header {
 	background: #FF5859;
 	overflow: hidden;
 
+	.container {}
+
 	@include media ('<tablet') {
-		height: 480px;
+		height: 640px;
 	}
 
 	.parallax-bg {
@@ -1898,9 +1931,10 @@ header {
 }
 
 .catalog-presentation {
-	height: 750px;
+	min-height: 750px;
 	margin: 150px 0 100px 0;
 	padding: 0;
+	height: 100%;
 
 	@include media ('<tablet') {
 		margin: 25px 0 25px 0;
@@ -2156,7 +2190,8 @@ header {
 }
 
 .new-section {
-	height: 880px;
+	min-height: 880px;
+    height: 100%;
 
 	.catalog-new-wrapper {
 		width: 100%;

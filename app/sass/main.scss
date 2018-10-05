@@ -2539,6 +2539,21 @@ header {
 					transition: background 0.3s;
 				}
 			}
+
+			&:hover {
+				.descr-content {
+					min-height: 100%;
+					transition: 0.5s min-height;
+				}
+ 				.details {
+					height: 140px;
+					opacity: 1;
+					overflow: hidden;
+					transition: opacity 0.5s, height 0.5s;
+					transition-delay: 0.5s;
+					
+				}
+			}
 		}
 	}
 

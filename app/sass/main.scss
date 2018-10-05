@@ -127,6 +127,10 @@ section {
 			&.white {
 				color: #fff;
 			}
+
+			@include media ('<tablet') {
+				font-size: 30px;
+			}
 		}
 		p {
 			font-size: 18px;
@@ -1972,7 +1976,7 @@ header {
 				width: 300px;
 				height: 300px;
 				margin: 0 auto;
-				margin-bottom: 10px;
+				margin-bottom: 20px;
 			}
 
 			.descr-content {
@@ -2185,6 +2189,11 @@ header {
 				background: darken($color: $red-arigato, $amount: 15%);
 				transition: background-color 0.3s;
 			}
+
+			@include media ('<tablet') {
+				width: 300px;
+				margin: 10px auto 30px;
+			}
 		}
 	}
 }
@@ -2202,6 +2211,7 @@ header {
 
 		@include media ('<tablet') {
 			height: auto;
+			margin-bottom: 0;
 		}
 
 		.item {
@@ -2217,7 +2227,7 @@ header {
 
 			@include media ('<tablet') {
 				margin: 0 auto;
-				margin-bottom: 10px;
+				margin-bottom: 20px;
 				float: none;
 				width: 300px;
 				height: 300px;
@@ -2366,6 +2376,11 @@ header {
 		&:hover {
 			background: darken($color: $red-arigato, $amount: 15%);
 			transition: background-color 0.3s;
+		}
+
+		@include media ('<tablet') {
+			width: 300px;
+			margin: 10px auto 30px;
 		}
 	}
 }
@@ -2565,8 +2580,7 @@ header {
 					min-height: 100%;
 					transition: 0.5s min-height;
 				}
-
-				.details {
+ 				.details {
 					height: 140px;
 					opacity: 1;
 					overflow: hidden;

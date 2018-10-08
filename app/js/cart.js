@@ -35,7 +35,7 @@ function initShowNumberOfItems(){
 var itemsIds = [];
 $('.btn-cart').on('click', function(e){
     e.preventDefault();
-    var itemId = $(this).parents('.item').attr('id');
+    var itemId = $(this).parents('.item').attr('id') ? $(this).parents('.item').attr('id') : $('.slick-active').attr('id');
     var quantityOfItems = Number($(this).parents('.item').find('.quantity').text());
 
     if($(e.target).hasClass('more-than-one-item')){     

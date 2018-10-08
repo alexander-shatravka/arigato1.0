@@ -1,7 +1,7 @@
 window.catalog = [{
     id: '0',
     dateAdded: '2017-05-15T16:58:40.000Z',
-    title: 'Аляска',
+    title: 'Ролл Аляска',
     description: 'The best food for you and your friends.Филадельфия',
     placeholder: null,
     discountedPrice: 145,
@@ -9,16 +9,16 @@ window.catalog = [{
     popularity: 1,
     hasNew: true,
     category: ['суши', 'presentation'],
-    weight: 285,
+    weight: 220,
     info: {'грамм':'215','калорий':'400','гривен':'145'},
-    ingredients: 'Рис, Нори, Авокадо, Огурец, Тобико, Лосось',
+    ingredients: 'Состав: рис, нори, сливочный сыр, лосось 50г., огурец, японский майонез, авокадо, тобико(икра летучей рыбы)',
     size: 8,
     thumbnail: 'img/dishes/Alaska-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/alaska-big.jpg' // replace with paths to images extracted from item layout
 },{
     id: '1',
     dateAdded: '2017-05-15T16:58:40.000Z',
-    title: 'Дракон',
+    title: 'Ролл Королевский Дракон',
     description: 'The best food for you and your friends.Филадельфия',
     placeholder: null,
     discountedPrice: 370, 
@@ -26,16 +26,16 @@ window.catalog = [{
     popularity: 1,
     hasNew: true,
     category: ['суши', 'presentation'],
-    weight: 268,
+    weight: 230,
     info: {'грамм':'243','калорий':'550','гривен':'370'},
-    ingredients: 'Рис, Нори, Сыр сливочный, Авокадо, Угорь унаги, Кунжут, Соус унаги, Тобико, Креветка тигровая',
+    ingredients: 'Состав: рис, нори, сливочный сыр, авокадо, тобико (икра летучей рыбы), соус унаги, кунжут, 2 тигровые креветки, угорь 75 г.',
     size: 8,
     thumbnail: 'img/dishes/Dragon-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/Dragon-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '2',
     dateAdded: '2017-06-12T15:35:13.000Z',
-    title: 'Филаделфия лосось',
+    title: 'Ролл Филадельфия с лососем',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 220,
@@ -46,14 +46,14 @@ window.catalog = [{
     info: {},
     weight: 300,
     info: {'грамм':'300','калорий':'450','гривен':'220'},
-    ingredients: 'Рис, Нори, Сыр сливочный, Огурец, Лосось',
+    ingredients: 'Состав: рис, нори, сливочный сыр, огурец, лосось 120г.',
     size: 8,
     thumbnail: 'img/dishes/Fila-salmon-600.jpg', // replace with image extracted from item layout
     imgFull: 'img/dishes/Fila-salmon-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '3',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Веган',
+    title: 'Ролл Веган',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 60,
@@ -62,16 +62,16 @@ window.catalog = [{
     hasNew: true,
     category: ['суши' , 'presentation'],
     info: {},
-    weight: 188,
+    weight: 200,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Рис, Нори, Авокадо, Кунжут, Соус унаги, Перец болгарский, Огурец',
+    ingredients: 'Состав: рис, нори, огурец, кунжут, авокадо, паприка, соус унаги',
     size: 8,
     thumbnail: 'img/dishes/vegan-600.jpg', // replace with image extracted from item layout
     imgFull: 'img/dishes/vegan-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '4',
     dateAdded: '2017-06-12T15:35:13.000Z',
-    title: 'Веган тофу',
+    title: 'Ролл Веган с тофу',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 65,
@@ -80,16 +80,16 @@ window.catalog = [{
     hasNew: true,
     category: ['суши' , 'presentation'],
     info: {},
-    weight: 145,
+    weight: 175,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Рис, Нори, Огурец, Сыр тофу',
+    ingredients: 'Состав: рис, нори, огурец, томаты, лист салата, соус унаги',
     size: 8,
     thumbnail: 'img/dishes/vegan-t-600.jpg', // replace with image extracted from item layout
     imgFull: 'img/dishes/vegan-t-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '5',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Калифорния лосось',
+    title: 'Ролл Калифорния с лососем',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 145,
@@ -100,32 +100,32 @@ window.catalog = [{
     info: {},
     weight: 220,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Рис, Нори, Сыр сливочный, Авокадо, Лосось, Тобико',
+    ingredients: 'Состав: рис, нори, сыр сливочный, авокадо, лосось 45г., тобико (икра летучей рыбы)',
     size: 8,
     thumbnail: 'img/dishes/California-salmon-600.jpg', // replace with image extracted from item layout
     imgFull: 'img/dishes/California-salmon-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '6',
     dateAdded: '2017-06-12T15:35:13.000Z',
-    title: 'Компай',
+    title: 'Ролл Радуга',
     description: 'The best food for you and your friends',
     placeholder: null,
-    discountedPrice: 245,
-    price: 245,
+    discountedPrice: 295,
+    price: 295,
     popularity: 6,
     hasNew: true, //новинка false - нет, true - да
     category: ['суши', 'best-sellers'], //категории и подкатегории
     info: {},
-    weight: 260,
+    weight: 240,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Рис, Нори, Сыр сливочный, Авокадо, Тобико, Лосось, Угорь унаги', // вес сэта
+    ingredients: 'Состав: рис, нори, сливочный сыр, угорь 35г., кунжут, соус, лосось 60г., огурец, тобико (икра летучей рыбы), 2 тигровые креветки', // вес сэта
     size: 8, //сколько штук в сэте
     thumbnail: 'img/dishes/kampai-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/kampai-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '7',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Филаделфия с креветкой',
+    title: 'Ролл Филадельфия с тигровой креветкой',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 210,
@@ -134,16 +134,16 @@ window.catalog = [{
     hasNew: true,
     category: ['суши'],
     info: {},
-    weight: 195,
+    weight: 205,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Рис, Нори, Сыр сливочный, Креветка салатная, Креветка тигровая',
+    ingredients: 'Состав: рис, нори, сливочный сыр, огурец, 5 тигровых креветок, котельная креветка 30г., соус Унаги',
     size: 8,
     thumbnail: 'img/dishes/fila-krev-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/fila-krev-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '8',
     dateAdded: '2017-06-12T15:35:13.000Z',
-    title: 'Филадельфия двойной лосось',
+    title: 'Ролл Филадельфия с двойным лососем',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 260,
@@ -154,14 +154,14 @@ window.catalog = [{
     info: {},
     weight: 300,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Рис, Нори, Сыр сливочный, Лосось',
+    ingredients: 'Состав: рис, нори, сливочный сыр, лосось сверху 120г., лосось внутри 30г.',
     size: 8,
     thumbnail: 'img/dishes/Fila-salmon-salmon-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/Fila-salmon-salmon-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '9',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Филаделфия с угорём',
+    title: 'Ролл Филадельфия с угрём',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 280,
@@ -170,16 +170,16 @@ window.catalog = [{
     hasNew: false,
     category: ['суши', 'пицца'],
     info: {},
-    weight: 278,
+    weight: 260,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Рис, Нори, Сыр сливочный, Авокадо, Угорь унаги, Кунжут, Соус унаги',
+    ingredients: 'Состав: рис, нори, сливочный сыр, авокадо, соус унаги, кунжут, угорь 70г.',
     size: 8,
     thumbnail: 'img/dishes/Fila-acne-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/Fila-acne-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '10',
     dateAdded: '2017-06-12T15:35:13.000Z',
-    title: 'Маки с креветкой',
+    title: 'Ролл с креветкой',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85,
@@ -188,16 +188,16 @@ window.catalog = [{
     hasNew: false,
     category: ['суши'],
     info: {},
-    weight: 120,
+    weight: 100,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Рис, Нори, Креветка салатная',
+    ingredients: 'Состав: рис, нори, креветка тигровая 35г.',
     size: 6,
     thumbnail: 'img/dishes/maki-krev-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/maki-krev-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '11',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Маки с лососем',
+    title: 'Ролл с лососем',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85,
@@ -206,9 +206,9 @@ window.catalog = [{
     hasNew: false,
     category: ['суши'],
     info: {},
-    weight: 120,
+    weight: 100,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Рис, Нори, Лосось',
+    ingredients: 'Состав: рис, нори, лосось 35г.',
     size: 6,
     thumbnail: 'img/dishes/maki-salmon-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/maki-salmon-big.jpg' // replace with paths to images extracted from item layout
@@ -216,7 +216,7 @@ window.catalog = [{
 {
     id: '12',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Маки с угорём',
+    title: 'Ролл с угрём',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 95,
@@ -227,7 +227,7 @@ window.catalog = [{
     info: {},
     weight: 120,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Рис, Нори, Угорь унаги',
+    ingredients: 'Состав: рис, нори, угорь унаги 35г.',
     size: 6,
     thumbnail: 'img/dishes/maki-acne-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/maki-acne-big.jpg', // replace with paths to images extracted from item layout
@@ -245,14 +245,14 @@ window.catalog = [{
     info: {},
     weight: 250,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Креветка тигровая, Мука, Соль',
+    ingredients: 'Состав: креветка тигровая, мука, соль',
     size: 6,
     thumbnail: 'img/dishes/shrimp-lime-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/shrimp-lime-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '14',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Мидии с соусом Унаги острые',
+    title: 'Запечённые мидии в ракушках со спайси соусом',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 225,
@@ -261,69 +261,69 @@ window.catalog = [{
     hasNew: false,
     category: ['суши'],
     info: {},
-    weight: 170,
+    weight: 160,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Соус ширача, Мидии, Кунжут, Майонез, Сыр моцарелла, Соус унаги, Тобико',
+    ingredients: 'Состав: соус ширача, мидии, кунжут, японский майонез, сыр моцарелла, соус унаги, тобико (икра летучей рыбы)',
     size: 6,
     thumbnail: 'img/dishes/Unagi-mussels-spicy-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/Unagi-mussels-spicy-big.jpg', // replace with paths to images extracted from item layout
 },
-/*{
+{
     id: '15',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'суши set Philadelphia',
+    title: 'Ролл Калифорния угрём',
     description: 'The best food for you and your friends',
     placeholder: null,
-    discountedPrice: 85.75,
-    price: 85.75,
+    discountedPrice: 195,
+    price: 195,
     popularity: 1,
     hasNew: false,
-    category: ['sushi'],
+    category: ['суши'],
     info: {},
-    weight: 400,
+    weight: 210,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
+    ingredients: 'Состав: рис, нори, сливочный сыр, авокадо, угорь унаги 40г., кунжут, соус унаги',
     size: 8,
-    thumbnail: 'img/dishes/item-суши-2.jpg', // replace with path to image extracted from catalog layout
-    imgFull: 'img/dishes/item-big.jpg',
+    thumbnail: 'img/dishes/Callliforny-Acne-600.jpg', // replace with path to image extracted from catalog layout
+    imgFull: 'img/dishes/Callliforny-Acne-big.jpg',
 }, {
     id: '16',
     dateAdded: '2017-06-12T15:35:13.000Z',
-    title: 'The best food for you and your friends',
+    title: 'Ролл с авокадо',
     description: 'The best food for you and your friends',
     placeholder: null,
-    discountedPrice: 90,
-    price: 120,
+    discountedPrice: 45,
+    price: 45,
     popularity: 1,
     hasNew: false,
-    category: ['sushi'],
+    category: ['суши'],
     info: {},
-    weight: 400,
+    weight: 108,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
-    size: 8,
-    thumbnail: 'img/dishes/item-напитки.jpg', // replace with path to image extracted from catalog layout
-    imgFull: 'img/dishes/item-big-drink.jpg',
+    ingredients: 'Состав: рис, нори, авокадо 35г., кунжут, соус унаги',
+    size: 6,
+    thumbnail: 'img/dishes/maki-Avo-600.jpg', // replace with path to image extracted from catalog layout
+    imgFull: 'img/dishes/maki-avo-big.jpg',
 }, {
     id: '17',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'суши set Philadelphia',
+    title: 'Ролл Компай',
     description: 'The best food for you and your friends',
     placeholder: null,
-    discountedPrice: 85.75,
-    price: 85.75,
+    discountedPrice: 245,
+    price: 245,
     popularity: 1,
     hasNew: false,
-    category: ['sushi'],
+    category: ['суши'],
     info: {},
-    weight: 400,
+    weight: 255,
     info: {'калорий':'320','калорий':'320','рыбы':'320 гр','риса':'320 гр', 'процент':'50 %', 'майонеза': '10 гр'},
-    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
+    ingredients: 'Состав: рис, нори, сливочный сыр, авокадо, тобико (икра летучей рыбы), лосось 30 г.,  угорь унаги 70 г.',
     size: 8,
-    thumbnail: 'img/dishes/item-суши-2.jpg', // replace with path to image extracted from catalog layout
-    imgFull: 'img/dishes/item-big.jpg',
+    thumbnail: 'img/dishes/Kampai-true-600.jpg', // replace with path to image extracted from catalog layout
+    imgFull: 'img/dishes/Kampai-true-big.jpg',
 }, 
-{
+/*{
     id: '18',
     dateAdded: '2017-02-12T11:14:29.000Z',
     title: 'суши set Philadelphia',

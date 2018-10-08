@@ -18,7 +18,7 @@ html {
 
 body {
 	font-family: 'PT Sans-Narrow', sans-serif!important;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 *{
@@ -61,7 +61,7 @@ a {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		height: 200px;
-		width: 220px;
+		width: 240px;
 
 		img{
 			height: 100%;
@@ -1098,7 +1098,7 @@ header {
 
 		@include media('<tablet') {
 			height: 40px;
-			width: 100px;
+			width: 160px;
 			top: 10px;
 			left: 50%;
 			transform: translateX(-50%);
@@ -1190,7 +1190,7 @@ header {
 	
 	.cart-icon {
 		position: absolute;
-		min-width: 110px;
+		min-width: 60px;
 		right: 0;
 		top: 50%;
 		transform: translateY(-50%);
@@ -1215,6 +1215,7 @@ header {
 			font-size: 18px;
 			text-align: center;
 			font-weight: bold;
+			transition: height 0.3s, width 0.3s;
 		}
 
 		&.empty {
@@ -1223,6 +1224,7 @@ header {
 				height: 0;
 				width: 0;
 				font-size: 0;
+				transition: height 0.3s, width 0.3s;
 			}
 		}
 
@@ -1231,7 +1233,7 @@ header {
 			font-size: 14px;
 			font-weight: 500;
 			color: $dark-gray;
-			margin-left: 20px;
+			margin-left: 10px;
 
 			b{
 				font-family: 'PT Sans-Narrow', sans-serif;
@@ -1364,7 +1366,7 @@ header {
 
 	.custom-icon {
 		height: 15px;
-		width: 15px;
+		width: 16px;
 		display: inline-block;
 		margin-right: 10px;
 		background-size: contain;
@@ -1499,59 +1501,69 @@ header {
 	}
 
 	.intro-heading {
-		max-width: 400px;
+		width: 70%;
+		max-width: 1040px;
 		position: absolute;
 		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
+		bottom: 60px;
+		transform: translateX(-50%);
 		z-index: 9;
 		color: #fff;
+		padding: 0 10px;
+		box-sizing: border-box;
 
-		@include media('<tablet') {
-			width: 260px;
-			top: 40%;
+		@include media('<tablet') {	
+			width: 100%;
 		}
 
 		h1 {
 			font-size: 48px;
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 			text-transform: uppercase;
 			text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 
 			@include media('<tablet') {
-				font-size: 36px;
+				font-size: 28px;
 				margin-bottom: 10px;
 			}
 		}
 
 		h3 {
 			font-size: 30px;
-			margin-bottom: 30px;
+			margin-bottom:20px;
 			font-weight: 500;
-			text-transform: uppercase;
+			
 			text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 
 			@include media('<tablet') {
-				font-size: 30px;
+				font-size: 18px;
+				line-height: 1.2;
 			}
 		}
 
 		.button {
-			height: 50px;
+			height: 40px;
 			width: 170px;
-			line-height: 50px;
+			line-height: 40px;
 			font-size: 20px;
 			display: inline-block;
+
+			@include media('<tablet') {
+				width: 140px;
+			}
 
 			&:nth-child(1){
 				margin-right: 30px;
 
 				@include media('<tablet') {
-					margin: 0;
-					margin-bottom: 20px;
+					margin-right: 18px;
 				}
 			}
 
+		}
+
+		.btn-cart {
+			border-radius: 20px;
 		}
 	}
 
@@ -1561,17 +1573,13 @@ header {
 		left: 50%;
 		transform: translate(-50%, 50%);
 		width: 80%!important;
-		height: 120px;
-		max-width: 800px;
+		min-height: 80px;
+		max-width: 400px;
 		z-index: 9;
 
 		@include media('<tablet') {
-			position: relative;
-			top: 0;
-			left: 0;
-			transform: none;
 			margin: 0;
-			height: 50px;
+			height: 80px;
 			width: 100% !important;
 		}
 	}
@@ -1593,95 +1601,60 @@ header {
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		border-radius: $border-radius;
 		//overflow: hidden;
-		padding: 0 20px;
+		padding: 0 50px;
 		box-sizing: border-box;
 		transition: height 0.5s; 
 
 		.col {
-			padding: 30px 0 30px 15px;
 			box-sizing: border-box;
 			font-size: 19px;
+			padding-top: 20px;
 			font-weight: 500;
-			letter-spacing: 2.1px;
 			color: $gray;
-			height: 100%;
+			min-height: 100%;
 			width: 100px;
-			text-align: left;
+			text-align: center;
 			position: relative;
 			display: block;
 
-			@include media ('<tablet') {
-				font-size: 12px;
-				height: 100%;
-				padding: 5px 0 0 10px;
-			}
 
 			b {
 				font-size: 30px;
 				font-weight: 700;
 				display: inline-block;
-				margin-right: 5px;
-				letter-spacing:0px;
 
-				@include media ('<tablet') {
-					font-size: 14px;
-				}
 			}
 
-
-			&:first-child {
-				width: 200px;
-				font-size: 28px;
-				font-weight: 700;
-				line-height: 0.9;
-
-				&::before {
-					display: none;
-				}
-
-				@include media ('<tablet') {
-					position: absolute;
-					padding: 0;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					top: -10px;
-
-					font-size: 16px;
-					color: #fff;
-					width: auto;
-				}
-			}
 			
-			&::before {
-				content: '';
-				display: block;
-				width: 2px;
-				height: 100%;
-				position: absolute;
-				left: 0;
-				top: 50%;
-				transform: translateY(-50%);
-				height: 40px;
-				background: $red-arigato;
+			// &::before {
+			// 	content: '';
+			// 	display: block;
+			// 	width: 2px;
+			// 	height: 100%;
+			// 	position: absolute;
+			// 	left: 0;
+			// 	top: 50%;
+			// 	transform: translateY(-50%);
+			// 	height: 40px;
+			// 	background: $red-arigato;
 
-				@include media ('<tablet') {
-					height: 30px;
-					transform: translateY(-60%);
-				}
-			}
+			// 	@include media ('<tablet') {
+			// 		height: 30px;
+			// 		transform: translateY(-60%);
+			// 	}
+			// }
 
-			&:nth-child(2){
-				@include media ('<tablet') {
-					&::before {
-						display: none;
-					}
-				}
+			// &:nth-child(2){
+			// 	@include media ('<tablet') {
+			// 		&::before {
+			// 			display: none;
+			// 		}
+			// 	}
 				
-			}
+			// }
 
 			span {
-				text-align: left;
-				font-size: 18px;
+				font-size: 20px;
 				display: block;
 				font-weight: 500;
 				//margin-top: 5px;
@@ -1797,7 +1770,7 @@ header {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		left: -55px; 
+		left: -20px; 
 		background: $red-arigato;
 		display: flex;
 		align-items: center;
@@ -1805,12 +1778,15 @@ header {
 		justify-content: center;
 		transition: background 0.3s;
 		border: 2px solid #fff;
+		z-index: 9;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 		i {
 			font-size: 18px;
 			font-weight: bold;
 			color: #fff;
-			text-align: center;	
+			text-align: center;
+			margin-left: -3px;	
 		}
 
 		&:hover {
@@ -1831,7 +1807,7 @@ header {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		right: -55px; 
+		right: -20px; 
 		background: $red-arigato;
 		display: flex;
 		align-items: center;
@@ -1839,12 +1815,15 @@ header {
 		justify-content: center;
 		transition: background 0.3s;
 		border: 2px solid #fff;
+		z-index: 9;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 		i {
 			font-size: 18px;
 			font-weight: bold;
 			color: #fff;	
 			text-align: center;
+			margin-right: -3px;
 		}
 		&:hover {
 			background: darken($color: $red-arigato, $amount: 15%);
@@ -1972,7 +1951,7 @@ header {
 	height: 100%;
 
 	@include media ('<tablet') {
-		margin: 25px 0 25px 0;
+		margin: 70px 0 25px 0;
 		height: auto;
 	}
 	
@@ -2033,7 +2012,7 @@ header {
 					font-size: 18px;
 					font-weight: 700;
 					text-transform: uppercase;
-					margin-bottom: 28px;
+					margin-bottom: 20px;
 					font-weight: bold;
 					color: #fff;
 					max-width: 80%;
@@ -2046,12 +2025,12 @@ header {
 					transition: opacity 0.5s, height 0.5s;
 
 					p {
-						line-height: 1.5;
+						line-height: 1.2;
 						font-size: 18px;
 						margin-bottom: 0;
 
 						&:nth-child(3){
-							margin-top: 30px;
+							margin-top: 20px;
 							font-weight: 500;
 						}
 					}
@@ -2153,7 +2132,7 @@ header {
 				}
 
 				.details {
-					height: 140px;
+					height: 160px;
 					opacity: 1;
 					overflow: hidden;
 					transition: opacity 0.5s, height 0.5s;
@@ -2300,7 +2279,7 @@ header {
 					transition: opacity 0.5s, height 0.5s;
 
 					p {
-						line-height: 1.5;
+						line-height: 1.2;
 						margin-bottom: 0;
 
 						&:nth-child(3){
@@ -2375,7 +2354,7 @@ header {
 				}
 
 				.details {
-					height: 140px;
+					height: 160px;
 					opacity: 1;
 					overflow: hidden;
 					transition: opacity 0.5s, height 0.5s;
@@ -2417,78 +2396,53 @@ header {
 }
 
 .delivery-section {
-	position: relative;
-	height: 580px;
 	padding: 0;
+	height: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	@include media ('<tablet') {
+		display: block;
+	}
 
 	.anchor {
 		position: absolute;
 		top: -100px;
 	}
 
-	.heading {
-		margin-bottom: 45px;
+	iframe {
+		margin-top: 80px;
+		width: 70%;
+		height: 450px;
+
+		@include media ('<tablet') {
+			margin-top: 90px;
+			width: 100%;
+		}
+
 	}
 
 	.container {
-		height: 500px;
-		position: relative;
+		width: 30%;
+		margin-top: 100px;
+		padding: 0 30px;
 
 		@include media ('<tablet') {
-			height: 100%;
-		}
-
-		iframe {
-			max-width: 70%;
 			width: 100%;
-			float: left;
-
-			@include media ('<tablet') {
-				max-width: 100%;
-				float: none;
-			}
-
+			margin-top: 0;
 		}
 
 		.descr {
-			position: absolute;
-			width: 30%;
-			padding: 30px;
-			box-sizing: border-box;
-			right: 0;
-			top: 50%;
-			transform: translateY(-50%);
 			text-align: left;
-
-			@include media ('<tablet') {
-				
-			}
+			margin: auto;
+			padding: 30px 0;
 
 			p {
 				margin-bottom: 10px;
 				font-size: 20px;
 			}
 		}
-	}
-	
-	.svg-content {
-		width: 50%;
-		height: 100%;
-		float: left;
-
-		img {
-			width: 90%;
-			height: auto;
-		}
-	}
-
-	.text-content {
-		margin-top: 80px;
-		display: inline-block;
-		width: 49%;
-		text-align: left;
-		height: 100%;
-		float: right;
 	}
 }
 
@@ -2557,7 +2511,7 @@ header {
 					font-size: 18px;
 					font-weight: 700;
 					text-transform: uppercase;
-					margin-bottom: 28px;
+					margin-bottom: 20px;
 					font-weight: bold;
 					color: #fff;
 					max-width: 80%;
@@ -2565,16 +2519,17 @@ header {
 
 				.details {
 					height: 0px;
+					min-height: 0px;
 					opacity: 0;
 					overflow: hidden;
-					transition: opacity 0.5s, height 0.5s;
+					transition: opacity 0.5s, min-height 0.5s;
 
 					p {
 						line-height: 1.5;
 						margin-bottom: 0;
 
 						&:nth-child(3){
-							margin-top: 30px;
+							margin-top: 20px;
 							font-weight: 500;
 						}
 					}
@@ -2644,11 +2599,12 @@ header {
 					transition: 0.5s min-height;
 				}
  				.details {
-					height: 140px;
+					min-height: 160px;
 					opacity: 1;
 					overflow: hidden;
-					transition: opacity 0.5s, height 0.5s;
+					transition: opacity 0.5s, min-height 0.5s;
 					transition-delay: 0.2s;
+					
 				}
 			}
 		}
@@ -2784,7 +2740,7 @@ header {
 		}
 
 		.dropdown {
-			z-index: 99999999;
+			z-index: 9;
 			position: absolute;
 			top: 30px;
 			width: 100%;
@@ -3078,12 +3034,14 @@ footer {
 
 			@include media ('<tablet') {
 				left: 50%;
-				bottom: 0;
-				transform: translate(-50%, 0);
+				bottom: 50px;
+				height: 260px;
+				width: 300px;
+				transform: translate(-50%, -20%);
 			}
 	
 			.row {
-				min-height: 50px;
+				min-height: 60px;
 				padding: 20px 0 9px 0;
 				box-sizing: border-box;
 				border-bottom: 1px solid #E9E9E9;
@@ -3095,7 +3053,7 @@ footer {
 				flex-wrap: wrap;
 
 				@include media ('<tablet') {
-					padding: 15px 0 5px 0;
+					padding: 15px 0 15px 0;
 				}
 	
 				.details {
@@ -3115,6 +3073,9 @@ footer {
 	
 				&:nth-child(1) {
 					min-height: 100px;
+					@include media ('<tablet') {
+						min-height: 80px;
+					}
 				}
 	
 				&:nth-child(2) {
@@ -3129,11 +3090,22 @@ footer {
 						display: none;
 					}
 				}
+
+				&:nth-child(3) {
+					@include media ('<tablet') {
+						display: none;
+					}
+				}
 	
 				&:nth-child(4) {
 					border: 0!important;
 					text-align: center;
 					padding-bottom: 15px;
+
+					@include media ('<tablet') {
+						height: 50px;
+						border-bottom: 1px solid #E9E9E9;
+					}
 				}
 	
 				.btn-cart {
@@ -3146,6 +3118,10 @@ footer {
 					color: #fff;
 					font-family: 'PT Sans-Narrow', sans-serif;
 					font-size: 20px;
+
+					@include media ('<tablet') {
+						//margin-top: -60px;
+					}
 	
 					i {
 						margin-left: 10px;
@@ -3235,6 +3211,10 @@ footer {
 				display: block;
 				margin-bottom: 20px;
 				font-family: 'PT Sans-Narrow', sans-serif;
+
+				@include media ('<tablet') {
+					display: none;
+				}
 	
 				.icon-tripple-arrow {
 					font-size: 20px;

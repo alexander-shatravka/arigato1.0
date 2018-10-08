@@ -29,7 +29,7 @@ $(document).ready(function(){
     changeCursorPosition();
    // registerValidationRules();
     //initCustomScrollBar();    
-});
+}); 
 
 function initJcf(){
     jcf.replaceAll();
@@ -117,7 +117,7 @@ function initSlickAutoplay(){
 
 function initSlick(){
 	$('.slick-slider').slick({
-        autoplay: false,
+        autoplay: true,
         vertical: false,
 		autoplaySpeed: 6000,
 		speed	: 1000,
@@ -140,7 +140,10 @@ function initItemInfoOnStart(){
     //alert($('.slick-current').attr('id'));
     $('.slick-slider').on('afterChange', function(){
         var id = $('.slick-current').attr('id');
-        var infoHTML = '<li class="col">'+ window.catalog[id].title +'</li>\n'; 
+        var infoHTML = '';
+        $('.intro-heading h1').html(window.catalog[id].title);
+        var ingridientsList = window.catalog[id].ingredients.split(':')[1];
+        $('.intro-heading h3').html(ingridientsList);
         var itemInfo = window.catalog[id].info;
     
         var counter = 0;
@@ -159,7 +162,10 @@ function initItemInfoOnStart(){
     //temprorary code
     function setFirst(){ 
         var id = 0;
-        var infoHTML = '<li class="col">'+ window.catalog[id].title +'</li>\n'; 
+        var infoHTML = '';
+        $('.intro-heading h1').html(window.catalog[id].title);
+        var ingridientsList = window.catalog[id].ingredients.split(':')[1];
+        $('.intro-heading h3').html(ingridientsList);
         var itemInfo = window.catalog[id].info;
     
         var counter = 0;

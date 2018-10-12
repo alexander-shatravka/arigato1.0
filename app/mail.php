@@ -9,6 +9,7 @@
                 <body>
                     <p>Имя: '.$_POST['name'].'</p>
                     <p>Телефон: '.$_POST['phone'].'</p> 
+                    <p>Почта: '.$_POST['email'].'</p> 
                     <p>Адресс доставки: '.$_POST['address'].'</p> 
                     <p>Самовывоз из:'.$_POST['pickup-destination'].'</p>  
                     <p>Количество приборов:'.$_POST['tools-quantity'].'</p> 
@@ -23,5 +24,4 @@
 
     // <p>Дата:'.$_POST['date'].'</p>
     // <p>Время:'.$_POST['time'].'</p>
-    print_r($_POST)
 ?>

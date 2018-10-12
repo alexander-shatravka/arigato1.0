@@ -280,6 +280,7 @@ section {
 	&.open {
 		right: 0;
 		transition: 0.5s right;
+		//transition-delay: 0.3s;
 	}
 
 	.cart-head {
@@ -1010,6 +1011,32 @@ section {
 	}
 }
 
+.btn-transparent {
+	width: 130px;
+	height: 40px;
+	border-radius: 40px; 
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'PT Sans-Narrow', sans-serif;
+	font-size: 18px;
+	border: 2px solid #FFF;
+	font-weight: 500;
+	background: transparent;
+	display: block;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background-color 0.5s;
+	box-sizing: border-box;
+
+	&:hover {
+		border-color: $red-arigato;
+		transition: border-color 0.5s;
+	}
+}
+
 .btn-cart {
 	height: 45px;
 	width: 45px;
@@ -1202,20 +1229,31 @@ header {
 		justify-content: space-between;
 		
 		i {
+			position: relative;
 			font-size: 20px;
 			line-height: 25px;
 			color: #000!important;
 			display: inline-block;
-			margin-right: 5px;
+			margin-right: 10px;
 		}
 
 		.items-in-bag {
 			display: inline-block;
-			color: #000;
-			font-size: 18px;
+			color: #fff;
+			font-size: 14px;
+			line-height: 17px;
 			text-align: center;
 			font-weight: bold;
+			height: 18px;
+			width: 18px;
+			background: $red-arigato;
+			border-radius: 50%;
 			transition: height 0.3s, width 0.3s;
+			position: absolute;
+			right: -12px;
+			top: -4px;
+			font-family: 'PT Sans-Narrow', sans-serif;
+
 		}
 
 		&.empty {
@@ -1225,6 +1263,7 @@ header {
 				width: 0;
 				font-size: 0;
 				transition: height 0.3s, width 0.3s;
+				color: #000;
 			}
 		}
 
@@ -1371,6 +1410,10 @@ header {
 		margin-right: 10px;
 		background-size: contain;
 
+		&.menu {
+			background: url('../img/icon-menu.svg') no-repeat center center; 
+		}
+
 		&.loop {
 			background: url('../img/icon-loop.svg') no-repeat center center; 
 		}
@@ -1484,7 +1527,7 @@ header {
 }
 
 .intro-section {
-	height: 92vh;
+	height: 100vh;
 	padding: 0;
 	padding-top: 80px;
 	margin-top: -80px;
@@ -1502,15 +1545,39 @@ header {
 
 	.intro-heading {
 		width: 70%;
-		max-width: 1040px;
+		max-width: 500px;
 		position: absolute;
-		left: 50%;
-		bottom: 60px;
-		transform: translateX(-50%);
+		left: 0;
+		top: 60%;
+		transform: translateY(-50%);
 		z-index: 9;
 		color: #fff;
 		padding: 0 10px;
 		box-sizing: border-box;
+		text-align: left;
+		opacity: 0;
+		//transition: opacity 1s, left 1s;
+
+		@include media('<tablet') {
+			top: 55%;
+			max-width: 300px;
+		}
+
+		&.show {
+			left: 90px;
+			opacity: 1;
+			transition: opacity 1s, left 1s;	
+
+			@include media('<tablet') {
+				left: 15px;
+			}
+		}
+
+		&.show-after{
+			left: 180px;
+			opacity: 0;
+			transition: opacity 1s, left 1s;
+		}
 
 		@include media('<tablet') {	
 			width: 100%;
@@ -1529,7 +1596,7 @@ header {
 		}
 
 		h3 {
-			font-size: 30px;
+			font-size: 24px;
 			margin-bottom:20px;
 			font-weight: 500;
 			
@@ -1541,29 +1608,75 @@ header {
 			}
 		}
 
+		p {
+			margin-bottom: 30px;
+
+			span {
+				display: inline-block;
+				font-size: 30px;
+				position: relative;
+
+				&:first-child {
+					padding-right: 20px;
+					margin-right: 15px;
+
+					&::after{
+						content: '';
+						display: block;
+						height: 20px;
+						width: 3px;
+						position: absolute;
+						right: 1px;
+						bottom: 4px;
+						//transform: translateY(50%);
+						background: #fff;
+					}
+				}
+			}
+		}
+		
+		@include media('<tablet') {
+			div {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				align-content: center;
+				align-items: center;
+				justify-content: space-between;
+				box-sizing: border-box;
+			}
+		}
+
 		.button {
-			height: 40px;
+			height: 50px;
 			width: 170px;
-			line-height: 40px;
+			line-height: 50px;
 			font-size: 20px;
 			display: inline-block;
+			text-align: center;
 
 			@include media('<tablet') {
-				width: 140px;
+				width: 130px;
 			}
 
 			&:nth-child(1){
 				margin-right: 30px;
 
 				@include media('<tablet') {
-					margin-right: 18px;
+					margin-right: 0;
 				}
 			}
 
 		}
 
+
+
+		.btn-transparent {
+			line-height: 48px;
+		}
+
 		.btn-cart {
-			border-radius: 20px;
+			border-radius: 30px;
 		}
 	}
 
@@ -1704,7 +1817,7 @@ header {
 
 	.slick-slider {
 		width: 100%;
-		height: 92vh;
+		height: 100vh;
 
 		@include media("<tablet") {
 			height: 60vh;
@@ -1713,7 +1826,7 @@ header {
 	}
 
 	.slide {
-		height: 92vh;
+		height: 100vh;
 		width: 100%;	
 		position: relative;
 
@@ -1951,7 +2064,7 @@ header {
 	height: 100%;
 
 	@include media ('<tablet') {
-		margin: 70px 0 25px 0;
+		margin: 30px 0 25px 0;
 		height: auto;
 	}
 	
@@ -2239,8 +2352,8 @@ header {
 				margin: 0 auto;
 				margin-bottom: 20px;
 				float: none;
-				width: 300px;
-				height: 300px;
+				width: 290px;
+				height: 290px;
 			}
 
 			.descr-content {
@@ -2459,6 +2572,7 @@ header {
 		padding-top: 30px;
 		margin-top: 30px;
 		margin-bottom: 100px;
+		box-sizing: border-box;
 		overflow: hidden;
 		display: flex;
 		flex-direction: row;
@@ -2475,9 +2589,9 @@ header {
 		.item {
 			display: block;
 			float: right;
-			width: 279px;
+			width: 270px;
 			//margin: 1%; 
-			height: 279px;
+			height: 270px;
 			margin-bottom: 30px;
 			position: relative;
 			overflow: hidden;
@@ -2689,8 +2803,9 @@ header {
 	}
 	.select-block {
 		float: right;
-		width: 20%;
+		width: 270px;
 		height: 30px;
+		box-sizing: border-box;
 		border: 1px solid #F4F4F4;
 		border-radius: 3px;  
 		position: relative;
@@ -2749,8 +2864,8 @@ header {
 			text-align: right;
 			transition: height 0.5s;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-			border-bottom-left-radius: 3px;
-			border-bottom-right-radius: 3px;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
 
 
 			div {
@@ -2802,6 +2917,89 @@ header {
 		}
 	}
 
+}
+
+.discount-block {
+	background: #ffb533 url(../img/discount-bg.png) no-repeat center center;
+	background-size: contain;
+	height: 110px;
+	width: 100%;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+	margin-bottom: 100px;
+	font-family: "Blogger Sans", sans-serif;
+	text-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+	@include media ('<tablet') {
+		width: 100%;
+		height: 265px;
+		margin-bottom: 0;
+		background: #ffb533 url(../img/discount-mobile-bg.png) no-repeat center center;
+		text-align: center;
+	}
+
+	.container {
+		width: 830px;
+		position: relative;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		align-items: center;
+		justify-content: flex-start;
+		color: #fff;
+
+		@include media ('<tablet') {
+			width: 100%;
+			flex-direction: column;
+			padding-top: 30px;
+		}
+		
+		img {
+			height: 150px;
+			width: 150px;
+			display: inline-block;
+			margin-right: 50px;
+
+			@include media ('<tablet') {
+				width: 100px;
+				height: 90px;
+				position: absolute;
+				bottom: 20px;
+				margin-right: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+
+		h6 {
+			font-size: 57px;
+			text-transform: uppercase;
+			font-weight: 700;
+			width: 340px;
+
+			@include media ('<tablet') {
+				width: 100%;
+				font-size: 40px;
+				margin-bottom: 10px;
+			}
+		}
+
+		p {
+			font-size: 21px;
+			text-transform: uppercase;
+			font-weight: 700;
+			width: 240px;
+
+			@include media ('<tablet') {
+				font-weight: 600;
+				line-height: 1.2;
+			}
+
+			strong {
+				font-size: 28px;
+			}
+		}
+	}
 }
 
 footer {
@@ -2890,7 +3088,7 @@ footer {
 		}
 
 		&.col-l {
-			width: 293px;
+			width: 278px;
 
 			@include media ('<tablet') {
 				text-align: center;
@@ -3021,14 +3219,14 @@ footer {
 		}
 	
 		.item-menu {
-			width: 270px;
 			background: #fff;
 			padding: 0 20px;
 			position: absolute;
-			right: 30px;
-			top: 50%;
-			transform: translateY(-55%);
-			border-radius: 5px;
+			right: 0;
+			width: 320px;
+			height: 100%;
+			box-sizing: border-box;
+			top: 0;
 			text-align: left;
 			box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 
@@ -3155,9 +3353,12 @@ footer {
 			.counter {
 				user-select: none;
 				float: right;
+				display: flex;
+				align-items: baseline;
+
 				span{
-					height: 18px;
-					width: 18px;
+					height: 25px;
+					width: 25px;
 					display: inline-block;
 					margin-right: 7px;
 					font-weight: 700;
@@ -3170,7 +3371,7 @@ footer {
 	
 				.plus, .minus {
 					color: #fff;
-					line-height: 18px;
+					line-height: 25px;
 					border-radius: 50%;   
 					cursor: pointer;
 					font-size: 16px;
@@ -3183,7 +3384,7 @@ footer {
 				.minus {
 					background: $red-arigato;
 					transition: background-color 0.5s;
-					line-height: 17px;
+					line-height: 25px;
 					display: inline-block;
 					position: relative;
 					top: -1px;
@@ -3286,12 +3487,31 @@ footer {
 	background-position: center -70px;
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 100%;
 }
 
-.thankYouPage.heading {
+.thankYouPage {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+	@include media ('<tablet') {
+		transform: translate(-50%, -35%);
+	}
+
 	h2 {
-		margin-top: 200px;
-		margin-bottom: 10px;
+		font-size: 42px;
+		font-weight: bold;
+		margin-bottom: 25px;
+		font-weight: 700;
+		color: #D0011B;
+		text-transform: uppercase;
+
+		@include media ('<tablet') {
+			margin-bottom: 0px;
+		}
 	}
 	
 	p {
@@ -3300,6 +3520,12 @@ footer {
 		font-size: 30px;
 		line-height: 1.2;
 		font-weight: 700;
+
+		@include media ('<tablet') {
+			font-size: 25px;
+			line-height: 1.0;
+		}
+		
 	}
 
 	.social {

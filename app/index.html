@@ -63,6 +63,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</a>
 		<div class="right">
 			<ul class="info-list">
+				<li><a href="catalog.html"><i class="custom-icon menu"></i><span>Меню</span></a></li>
 				<!--<li><a><i class="custom-icon loop"></i><span> Поиск</span></a></li> -->
 				<li><a href="delivery.html"><i class="custom-icon location-pin"></i><span>Доставка</span></a></li>
 				<li><a><i class="custom-icon clock"></i><span>11:00-23:00</span></a>
@@ -79,8 +80,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</li>
 			</ul>
 			<a href= ""class="cart-icon">
-				<i class="fi flaticon-shopping-cart"></i>
-				<span class="items-in-bag"></span>
+				<i class="fi flaticon-shopping-cart"><span class="items-in-bag"></span></i>
 				<div class="total-price"><b>0</b>грн</div>
 			</a>
 		</div>
@@ -183,12 +183,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<input type="text" name="sause-quantity" id="sause-quantity">
 					<input type="text" name="vasabi-quantity" id="vasabi-quantity">
 					<input type="text" name="cart-content" id="cart-content">
+					<textarea name="cart-content-for-telegram" id="cart-content-for-telegram"></textarea>
 				</div>
 			</form>
 			<div class="destination-picker picker">
 				<a class="close-picker"><i class="picker-closer fas fa-arrow-left"></i>Выбор пункта</a>
 				<ul>
-					<li><a>ул. Петра Гигоренка 5a</a></li>
+					<li><a>ул. Петра Григоренка 5a</a></li>
 				</ul>
 				<a class="button btn-red disabled">Подтвердить</a>
 				<a class="picker-closer"><i class="fas fa-angle-left"></i> Назад</a>
@@ -208,12 +209,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</div>
 	<section class="intro-section">
 		<div class="filter-brightness"></div>
-		<div class="intro-heading">
+		<div class="intro-heading show">
 			<h1>ПРОГОЛОДАЛись ?</h1>
 			<h3>мы вас накормим!</h3>
+			<p><span class="weight"></span><span class="price"></span></p>
 			<div>
 				<a href="catalog.html" class="button btn-red btn-cart">В корзину</a>
-				<a href="catalog.html" class="button btn-light">в меню</a>
+				<a href="item.html" class="open-from-slider button btn-transparent">подробнее</a>
 			</div>
 		</div>
 		<div class="slick-slider">
@@ -227,13 +229,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="img-big"><img src="img/dishes/Fila-salmon-big.jpg" alt=""><div class="bg"></div></div>
 			</a>
 		</div>
-		<div class="item-info-container">
+		<!-- <div class="item-info-container">
 			<ul class="item-info">
 				
 			</ul>
 			<a class="slick-prev"><i class="flaticon-back"></i></a>
 			<a class="slick-next"><i class="flaticon-next-1"></i></a>
-		</div>
+		</div> -->
 		<!--<ul class="social-intro">
 			<li><a href="" class="facebook"><i class="fab fa-facebook-square"></i></a></li>
 			<li><a href="" class="instagram"><i class="fab fa-instagram"></i></a></li>
@@ -282,7 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</section>
 	
-	<section class="live-section" id="tv">
+	<!-- <section class="live-section" id="tv">
 		<div class="parallax-bg"></div>
 			<div class="front-layer">
 			<div class="container">
@@ -294,12 +296,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="live-video">
 				<div class="video-spacer"></div>
 				<iframe width="100%" height=100%" src="https://www.youtube.com/embed/auLmekEsaak" frameborder="0" allowfullscreen></iframe>
-				<!-- <iframe width="100%" height=100%" src="https://www.youtube.com/embed/lMeA_UJRAEQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-				<!-- <div class="play-button"><i class="fa fa-play"></i></div> -->
 			</div>
 			</div>
 		
-	</section>
+	</section> 
 
 	<section class="new-section">
 		<div class="container">
@@ -309,7 +309,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="catalog.html" class="btn-catalog">Смотреть полное меню</a>
 		</div>
 		</div>	
-	</section>
+	</section> -->
+	<div class="discount-block">
+		<div class="container">
+			<img src="img/svg-girl.svg" alt="">
+			<h6>10% скидка</h6>
+			<p>НА ВСЕ МЕНЮ «ARIGATO» <strong>ПРИ САМОВЫВОЗЕ</strong></p>
+		</div>
+	</div>
 	</div>
 
 	<footer id="footer">

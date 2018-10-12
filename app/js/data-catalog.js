@@ -12,6 +12,7 @@ window.catalog = [{
     weight: 220,
     info: {'грамм':'215','калорий':'400','гривен':'145'},
     ingredients: 'Состав: рис, нори, сливочный сыр, лосось 50г., огурец, японский майонез, авокадо, тобико(икра летучей рыбы)',
+    ingredientsFull: {'рис':'100', 'нори':'1шт', 'лосось':'50гр', 'огурец':'10гр', 'майонез': '10гр'},
     size: 8,
     thumbnail: 'img/dishes/Alaska-600.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/dishes/alaska-big.jpg' // replace with paths to images extracted from item layout

@@ -23,7 +23,7 @@ var currentItemHTML =
             '<div class="row">	\n'+
                 '<a href="" class="button btn-cart more-than-one-item">В корзину <i class="fi flaticon-shopping-cart"></i></a>\n'+
             '</div>\n'+
-            '<a class="back-catalog" href="catalog.html">Продолжить покупки <span class="icon-tripple-arrow">›››</span></a>\n'+
+            // '<a class="back-catalog" href="catalog.html">Продолжить покупки <span class="icon-tripple-arrow">›››</span></a>\n'+
         '</div>\n'+
         /*'<ul class="item-info">\n'+
             '<li class="col">150<span>грамм</span></li>\n'+

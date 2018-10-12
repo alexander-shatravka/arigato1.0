@@ -83,5 +83,5 @@ function setItemsHTMLPresentation(displayCatalog, category, container, quantity,
 var containerPresentation = document.querySelector('.catalog-presentation-wrapper')
 setItemsHTMLPresentation(catalogParseCopy, 'presentation', containerPresentation, 6, htmlForCatalogPresentation); 
 
-var containerPresentationNEW = document.querySelector('.catalog-new-wrapper')
-setItemsHTMLPresentation(catalogParseCopy, 'new', containerPresentationNEW, 8, htmlForCatalogNew); 
+// var containerPresentationNEW = document.querySelector('.catalog-new-wrapper')
+// setItemsHTMLPresentation(catalogParseCopy, 'new', containerPresentationNEW, 8, htmlForCatalogNew); 

@@ -27,6 +27,7 @@ $(document).ready(function(){
     initEnablePickers();
     destinationPicker();
     changeCursorPosition();
+    initAnimateHeading();
    // registerValidationRules();
     //initCustomScrollBar();    
 }); 
@@ -145,6 +146,9 @@ function initItemInfoOnStart(){
         var ingridientsList = window.catalog[id].ingredients.split(':')[1];
         $('.intro-heading h3').html(ingridientsList);
         var itemInfo = window.catalog[id].info;
+        $('.intro-heading .weight').html(window.catalog[id].weight+' грамм');
+        $('.intro-heading .price').html(window.catalog[id].discountedPrice+' гривен');
+        var itemInfo = window.catalog[id].info;
     
         var counter = 0;
         for (var key in itemInfo) { 
@@ -166,6 +170,8 @@ function initItemInfoOnStart(){
         $('.intro-heading h1').html(window.catalog[id].title);
         var ingridientsList = window.catalog[id].ingredients.split(':')[1];
         $('.intro-heading h3').html(ingridientsList);
+        $('.intro-heading .weight').html('<b>'+ window.catalog[id].weight +'</b> грамм');
+        $('.intro-heading .price').html('<b>'+ window.catalog[id].discountedPrice +'</b> гривен');
         var itemInfo = window.catalog[id].info;
     
         var counter = 0;
@@ -181,6 +187,18 @@ function initItemInfoOnStart(){
     setTimeout(setFirst(),100);
 }
 initItemInfoOnStart();
+
+function initAnimateHeading(){
+    var heading = $('.intro-heading');
+    $('.slick-slider').on('afterChange', function(){
+        heading.addClass('show'); 
+    })
+    $('.slick-slider').on('beforeChange', function(){
+        heading.removeClass('show');
+        heading.addClass('show-after');
+        setTimeout((function(){heading.removeClass('show-after')}),500);
+    })
+}
 
 // lightbox init
 function initFancybox() {
@@ -324,7 +342,8 @@ function initCartOpener(){
     });
 
     $('.btn-cart').on('click', function(e){
-        $('.cart-container').toggleClass('open');
+        setTimeout((function(){$('.cart-container').addClass('open')}),500);
+        setTimeout((function(){$('.cart-container').removeClass('open')}),1500);
     })
 }
 
@@ -344,7 +363,11 @@ function setInputCartHTML(){
     var cartText = $('.cart-items-container').text();
     var cartItems = cartText.split('грн').join('грн <br>');
     var cartOutput = cartItems + '<br>' + $('.order-block .total-row').text();
+    
+    var cartOutputForTelegram = cartText.split('грн').join('грн\n');
+
     $('#cart-content').val(cartOutput);
+    $('#cart-content-for-telegram').val(cartOutputForTelegram);
 }
 
 

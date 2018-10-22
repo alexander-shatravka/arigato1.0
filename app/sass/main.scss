@@ -2512,11 +2512,14 @@ header {
 	padding: 0;
 	height: auto;
 
-	display: flex;
-	flex-wrap: wrap;
+	position: relative;
+
+	// display: flex;
+	// flex-wrap: wrap;
 
 	@include media ('<tablet') {
 		display: block;
+		height: 700px;
 	}
 
 	.anchor {
@@ -2526,7 +2529,7 @@ header {
 
 	iframe {
 		margin-top: 80px;
-		width: 70%;
+		width: 100%;
 		height: 450px;
 
 		@include media ('<tablet') {
@@ -2537,11 +2540,20 @@ header {
 	}
 
 	.container {
-		width: 30%;
-		margin-top: 100px;
-		padding: 0 30px;
+		position: absolute;
+		top: 50%;
+		left: 30px;
+		transform: translateY(-50%);
+
+		width: 300px;
+		margin-top: 50px;
+		padding: 20px;
+		border-radius: 5px;
+
+		background: #FFF;
 
 		@include media ('<tablet') {
+			position: static;
 			width: 100%;
 			margin-top: 0;
 		}
@@ -2549,11 +2561,21 @@ header {
 		.descr {
 			text-align: left;
 			margin: auto;
-			padding: 30px 0;
+			// padding: 30px 0;
+
+			h2 {
+				color: #d0011b;
+				margin-bottom: 10px;
+				font-size: 30px;
+			}
 
 			p {
 				margin-bottom: 10px;
 				font-size: 20px;
+			}
+
+			.red {
+				color: #d0011b;
 			}
 		}
 	}
